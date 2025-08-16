@@ -60,7 +60,7 @@ Siga os passos abaixo para configurar o ambiente e o workflow no n8n.
     *   Este é o ponto de entrada do workflow. Após ativar o workflow, o n8n fornecerá um URL para este webhook.
 
 3.  **Configure o Nó `Edit Fields`:**
-    *   Este nó é responsável por extrair as variáveis necessárias (`id_conta`, `id_mensagem`, `message`, `messageType`, `timestamp`, `url_chatwoot`, `id_conversa`, `telefone`) do corpo da requisição do webhook.
+    *   Este nó é responsável por extrair as variáveis necessárias (`id_conta`, `id_mensagem`, `message`, `messageType`, `timestamp`, `id_conversa`, `telefone`) do corpo da requisição do webhook.
     *   A variável `telefone` (que será usada como `user_id` para a memória persistente) é extraída de `={{ $json.body.sender.phone_number }}`.
 
 4.  **Configure o Nó `Anthropic Chat Model`:**
